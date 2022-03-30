@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 	This script is intended to be utilized with the Tanium platform. The script validates whether or not a given MAC address is found within the endpoint's ARP cache and
     returns a boolean value indicating as such.
@@ -15,13 +15,15 @@ if ($LinkLayerAddress -eq '||$MAC_Address||'){
     exit
 }
 else {
-    if ([bool]$(Get-NetNeighbor | Where-Object {$_.LinkLayerAddress -match "$LinkLayerAddress"})) {
-    return $true
-} 
-else {
-    return $false
-}
-
+     
+     $LinkLayerAddress = $LinkLayerAddress.Replace(':','-')
+     
+     if ([bool]$(Get-NetNeighbor -AddressFamily IPv4 -State Incomplete,Stale,Unreachable | Where-Object {$_.LinkLayerAddress -match "$LinkLayerAddress"})) {
+          return $true
+     } 
+     else {
+          return $false
+     }
 }
 
 exit
