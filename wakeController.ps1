@@ -17,6 +17,8 @@ param (
 
 # Requires -Version 3.0
 
+$TargetMAC = [System.Uri]::UnescapeDataString("$TargetMAC")
+
 # Define script directory using $PSScriptRoot
 $scriptDirectory = $PSScriptRoot
 
