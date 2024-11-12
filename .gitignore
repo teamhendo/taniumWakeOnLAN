@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/taniumWakeOnLAN/CopilotIndices/0.2.1634.3922
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/taniumWakeOnLAN/FileContentIndex
+/.vs/taniumWakeOnLAN/FileContentIndex/436df04b-8205-4831-85bb-81dc99327aba.vsidx
+/.vs/taniumWakeOnLAN/v17
+/.vs/taniumWakeOnLAN/v17/.wsuo
+/.vs/taniumWakeOnLAN/v17/DocumentLayout.json
+/.vs/VSWorkspaceState.json
